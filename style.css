@@ -1,4 +1,3 @@
-/* 1. RESET Y VARIABLES (Igual que antes, la base de todo) */
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -21,7 +20,7 @@ body {
     overflow-x: hidden; /* Evita scrolls raros en móvil */
 }
 
-/* 3. HERO (Ajustado a tu estructura <main> -> <section>) */
+/* 3. HERO */
 .hero-gigante {
     min-height: 100svh;
     display: grid;
@@ -32,7 +31,7 @@ body {
         linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
         url('imagenes/imghero.webp') no-repeat center/cover;
     color: var(--eco-white);
-    text-align: center; /* Asegura que todo el texto se centre */
+    text-align: center;
     text-wrap: balance;
 }
 
@@ -45,13 +44,13 @@ h1 {
 .lead {
     font-size: clamp(1.1rem, 4vw, 1.4rem);
     max-width: 45ch;
-    margin: 0 auto; /* Centra el párrafo si es más estrecho que el contenedor */
+    margin: 0 auto; 
     opacity: 0.9;
 }
 
-/* 4. BOTÓN (Ahora es un <a>, así que añadimos display: inline-block) */
+/* 4. BOTÓN */
 .btn-eco-redundante {
-    display: inline-block; /* Importante para que el padding y transform funcionen bien en un <a> */
+    display: inline-block;
     text-decoration: none; /* Quita el subrayado del enlace */
     background: var(--eco-green);
     color: var(--eco-white);

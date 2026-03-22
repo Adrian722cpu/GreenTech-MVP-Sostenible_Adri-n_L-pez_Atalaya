@@ -1,4 +1,5 @@
-##GreenTech-MVP-Sostenible_Adrián_López_Atalaya
+##GreenTech-MVP-Sostenible_Adrián_López_Atalaya.
+
 Autor: Adrián López Atalaya
 
 Misión: **Optimización de huella de carbono digital y eliminación de obsolescencia programada**.

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenTech - MVP Sostenible</title>
+    <meta name="description" content="Landing page de GreenTech optimizada para bajo consumo energético.">
+
+    <style>
+        /* AQUÍ PEGAS EL CSS QUE HEMOS DISEÑADO (El de "autor" con variables y grid) */
+        
+        /* ... (Copia y pega el bloque de CSS que revisamos antes) ... */
+    </style>
+</head>
+<body>
+
+    <main>
+        <section class="hero-gigante">
+            <h1>Salvemos el Planeta</h1>
+            <p class="lead">
+                Únete a la revolución verde de GreenTech con código responsable de bajo impacto ambiental.
+            </p>
+
+            <a href="#contacto" class="btn-eco-redundante" role="button">
+                Quiero ayudar 🍃
+            </a>
+        </section>
+    </main>
+
+    <footer id="footer">
+        GreenTech Solutions &copy; <span id="year"></span> - Software Sostenible e-waste free.
+    </footer>
+
+    <script>
+        // Obtenemos el año sin usar Moment.js (ahorramos 70KB)
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Ejemplo de Lazy Loading manual para imágenes si añadieras más:
+        // img.setAttribute('loading', 'lazy');
+    </script>
+</body>
+</html>

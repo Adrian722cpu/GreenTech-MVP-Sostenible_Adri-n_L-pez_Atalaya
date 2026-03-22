@@ -29,7 +29,7 @@ body {
     gap: 1.5rem;
     background: 
         linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-        url('imagenes/imghero.webp') no-repeat center/cover;
+        url('img/imghero.webp') no-repeat center/cover;
     color: var(--eco-white);
     text-align: center;
     text-wrap: balance;

@@ -1,0 +1,90 @@
+/* 1. RESET Y VARIABLES (Igual que antes, la base de todo) */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    --eco-green: #1a5d1a;
+    --eco-light: #f0fff0;
+    --eco-white: #ffffff;
+    --eco-black: #0a0a0a;
+    --shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* 2. CUERPO */
+body {
+    font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+    background-color: var(--eco-light);
+    color: var(--eco-black);
+    line-height: 1.5;
+    overflow-x: hidden; /* Evita scrolls raros en móvil */
+}
+
+/* 3. HERO (Ajustado a tu estructura <main> -> <section>) */
+.hero-gigante {
+    min-height: 100svh;
+    display: grid;
+    place-content: center;
+    padding: 2rem;
+    gap: 1.5rem;
+    background: 
+        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+        url('imagenes/imghero.webp') no-repeat center/cover;
+    color: var(--eco-white);
+    text-align: center; /* Asegura que todo el texto se centre */
+    text-wrap: balance;
+}
+
+h1 {
+    font-size: clamp(2rem, 10vw, 4.5rem);
+    font-weight: 900;
+    line-height: 1.1;
+}
+
+.lead {
+    font-size: clamp(1.1rem, 4vw, 1.4rem);
+    max-width: 45ch;
+    margin: 0 auto; /* Centra el párrafo si es más estrecho que el contenedor */
+    opacity: 0.9;
+}
+
+/* 4. BOTÓN (Ahora es un <a>, así que añadimos display: inline-block) */
+.btn-eco-redundante {
+    display: inline-block; /* Importante para que el padding y transform funcionen bien en un <a> */
+    text-decoration: none; /* Quita el subrayado del enlace */
+    background: var(--eco-green);
+    color: var(--eco-white);
+    padding: 1.2rem 3rem;
+    border-radius: 4px; 
+    font-size: 1.1rem;
+    font-weight: 700;
+    transition: all 0.2s ease;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.btn-eco-redundante:hover {
+    filter: brightness(1.2);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+/* 5. FOOTER */
+footer {
+    padding: 2rem;
+    background: var(--eco-black);
+    color: #888;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+/* 6. ECO-QUERIES */
+@media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+}
+
+@media (prefers-color-scheme: dark) {
+    /* Si el usuario usa modo oscuro, bajamos brillo a la imagen para ahorrar energía */
+    .hero-gigante { filter: saturate(0.8); }
+}
